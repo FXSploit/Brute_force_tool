@@ -26,7 +26,8 @@ def try_finding(ip="127.0.0.1",maxl=3, user = "Administrator", output=False):
                 sys.stdout.write(choice(colors) + f"\r> {psw}")
                 sys.stdout.flush()
             if int(success) == 0:
-                print(rf"[ FOUND ] IP: {ip} | USER: {user} | Password: {"".join(value)}")
+                print(cc.Fore.LIGHTGREEN_EX+ rf"[ FOUND ] IP: {ip} | USER: {user} | Password: {"".join(value)}")
+                input("enter to exit")
                 break
 system("cls")
 print(cc.Fore.LIGHTYELLOW_EX+ r"""
@@ -43,7 +44,7 @@ print(cc.Fore.LIGHTYELLOW_EX+ r"""
 IP = input("[ BRUTE FORCE TOOL ] Enter IP           >> ")
 NAME = input(cc.Fore.LIGHTGREEN_EX+ "[ BRUTE FORCE TOOL ] Enter USERNAME     >> ")
 PASSWORDLENG = int(input(cc.Fore.LIGHTMAGENTA_EX+ "[ BRUTE FORCE TOOL ] Enter Password len >> "))
-output = input(cc.Fore.LIGHTRED_EX+ "[ BRUTE FORCE TOOL ] Use Print (if true: reduce performance) (1/0) >> ")
+output = int(input(cc.Fore.LIGHTRED_EX+ "[ BRUTE FORCE TOOL ] Use Print (if true: reduce performance) (1/0) >> "))
 if output == 1:
     output = True
 else:
